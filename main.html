@@ -1,0 +1,32 @@
+<head>
+	<title>Benchmark</title>
+</head>
+
+<body>
+</body>
+
+<template name="item">
+	<li><span class="label label-default">{{text}}</span></li>
+</template>
+
+<template name="list">
+	<div class="items-list">
+		<h3>{{title}}</h3>
+		<ul class="list-unstyled">
+		{{#each items}}
+			{{> item}}
+		{{/each}}
+		</ul>
+	</div>
+</template>
+
+<template name="page">
+	<div class="page">
+		<button class="btn btn-primary">Create New Page</button>
+		<div>
+			{{#each lists}}
+				{{> list}}
+			{{/each}}
+		</div>
+	</div>
+</template>
